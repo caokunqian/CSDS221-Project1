@@ -1,0 +1,176 @@
+ <!-- Author: Jack Qian -->
+ <!-- CSDS221 Project1:Booststrap Booking Form -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Booking Form</title>
+  <!-- Include Bootstrap 3.0 CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Include Toastr CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Toastr -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Include Toastr JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js">
+  </script>
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  </head>
+
+  
+<body>
+  <div class="container">
+    <div class="row">
+      <!-- Booking Form Section -->
+      <section class="col-md-8 col-md-offset-2">
+        <div class="well">
+          <h1 style="color:red;">Bootstrap Booking Form</h1>
+          <p> Fill out the form and click the submit button when complete</p>
+        </div>      
+        
+        <div class='row'>  
+       <!-- Left Side -->
+         <div class="col">
+           
+        <!-- User Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading">User:</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="username">Username:</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
+            </div>
+          </div>
+        </div>
+           
+        <!-- Contact Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Contact Information</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="phone"><i class="glyphicon glyphicon-earphone"></i> Phone:</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="fax"><i class="glyphicon glyphicon-print"></i> Fax:</label>
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-print"></i></span>
+                <input type="tel" class="form-control" id="fax" name="fax" placeholder="Enter fax number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="glyphicon glyphicon-envelope"></i> Email:</label>
+             
+              <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Schedule Panel -->
+        <div class="panel panel-default">
+          <div class="panel-heading">Schedule Information</div>
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="adults">Number of Adults:</label>
+              <select class="form-control" id="adults" name="adults">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="checkIn">Check-in Date:</label>
+              <input type="date" class="form-control" id="checkIn" name="checkIn">
+            </div>
+            <div class="form-group">
+              <label for="checkOut">Check-out Date:</label>
+              <input type="date" class="form-control" id="checkOut" name="checkOut">
+            </div>
+            <div class="form-group">
+              <label for="days">Number of Days:</label>
+              <input type="text" class="form-control" id="days" name="days" readonly>
+            </div>
+            <div class="form-group">
+              <label for="cost">Total Cost:</label>
+              <input type="text" class="form-control" id="cost" name="cost" readonly>
+            </div>
+          </div>
+        </div>
+           </div>
+       <!-- End Left Side -->
+
+        <!-- Right Side -->
+          <div class='col'>
+
+    
+          <!-- Other Information Panel -->
+  <div class="panel panel-default">
+    <div class="panel-heading">Other Information</div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="comments">Comments:</label>
+        <textarea class="form-control" id="comments" name="comments" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="priority">Priority:</label>
+        <div class="radio">
+          <label><input type="radio" name="priority" value="low">Low</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="priority" value="med">Medium</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="priority" value="high">High</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="slider">Slider:</label>
+        <input type="range" class="form-control-range" id="slider" name="slider" min="5" max="10" step="1">
+      </div>
+    </div>
+  </div>
+          
+          
+          </div>
+        <!-- End Right Side -->
+        </div>
+               
+
+        <!-- Buttons -->
+        <div class="form-group">
+          <button type="button" class="btn btn-default" id="resetBtn">Reset</button>
+          <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+ 
+  
+  </body>
+</html>
