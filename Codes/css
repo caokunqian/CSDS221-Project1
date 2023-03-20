@@ -1,0 +1,7 @@
+#bootstraptitle {
+  color: red
+}
+#panel-heading {
+  background-color: #ADD8E6; /* set the background color to light blue */
+  color: white; /* set the text color to white */
+}
