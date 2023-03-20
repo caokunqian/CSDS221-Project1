@@ -22,7 +22,7 @@ $(document).ready(function() {
 
         // Reset form and display success toaster
         function resetForm() {
-          $('input[type=text], input[type=date], input[type=email], ,input[type=fax],input[type=phone],textarea').val('');
+          $('input[type=text], input[type=date], input[type=email],input[type=fax],input[type=phone],textarea').val('');
           $('input[type=radio], input[type=checkbox]').prop('checked', false);
           $('select').prop('selectedIndex', 0);
           $('.has-error').removeClass('has-error');
